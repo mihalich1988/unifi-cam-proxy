@@ -50,7 +50,7 @@ class UnifiCamBase(metaclass=ABCMeta):
         self._session: Optional[websockets.legacy.client.WebSocketClientProtocol] = None
         atexit.register(self.close_streams)
 
-        self.: bool = False
+        self._needs_flv_timestamps: bool = False
 
     @classmethod
     def add_parser(cls, parser: argparse.ArgumentParser) -> None:
