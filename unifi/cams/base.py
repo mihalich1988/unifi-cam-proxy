@@ -50,7 +50,7 @@ class UnifiCamBase(metaclass=ABCMeta):
         self._session: Optional[websockets.legacy.client.WebSocketClientProtocol] = None
         atexit.register(self.close_streams)
 
-        self._needs_flv_timestamps: bool = False
+        self.: bool = False
 
     @classmethod
     def add_parser(cls, parser: argparse.ArgumentParser) -> None:
@@ -449,7 +449,7 @@ class UnifiCamBase(metaclass=ABCMeta):
                         "bitRateVbrMin": 48000,
                         "description": "Hi quality video track",
                         "enabled": True,
-                        "fps": 15,
+                        "fps": 25,
                         "gopModel": 0,
                         "height": 1080,
                         "horizontalFlip": False,
@@ -509,7 +509,7 @@ class UnifiCamBase(metaclass=ABCMeta):
                         "currentVbrBitrate": 1200000,
                         "description": "Medium quality video track",
                         "enabled": True,
-                        "fps": 15,
+                        "fps": 25,
                         "gopModel": 0,
                         "height": 720,
                         "horizontalFlip": False,
@@ -569,7 +569,7 @@ class UnifiCamBase(metaclass=ABCMeta):
                         "currentVbrBitrate": 200000,
                         "description": "Low quality video track",
                         "enabled": True,
-                        "fps": 15,
+                        "fps": 25,
                         "gopModel": 0,
                         "height": 360,
                         "horizontalFlip": False,
